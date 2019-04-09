@@ -30,6 +30,7 @@ public class LogFileContent {
 		return description;
 	}
 
+	
 	public static List<LogFileContent> readLogFile() throws IOException {
 		List<LogFileContent> list = new ArrayList<>();
 		try {
