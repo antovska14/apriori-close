@@ -20,8 +20,7 @@ public class LogFileList {
 	private static List<LogFileRowContent> readLogFile() throws IOException {
 		final String logFileName = "logs_BCS37_20181103.csv";
 		List<LogFileRowContent> logFileList;
-		FileReader fr = new FileReader(logFileName);
-		BufferedReader br = new BufferedReader(fr);
+		BufferedReader br = new BufferedReader(new FileReader(logFileName));
 		try {
 			String logFileRow;
 			logFileList = new ArrayList<>();
@@ -35,9 +34,6 @@ public class LogFileList {
 				}
 			}
 		} finally {
-			if (fr != null) {
-				fr.close();
-			}
 			if (br != null) {
 				br.close();
 			}

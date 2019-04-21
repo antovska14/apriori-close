@@ -6,6 +6,10 @@ import java.util.Map;
 public final class MapToIdIPTable extends TransactionTableMapped {
 	private static Map<String, Integer> ipMap = new HashMap<String, Integer>();
 
+	public static Map<String, Integer> getIpMap() {
+		return ipMap;
+	}
+	
 	@Override
 	protected List<LogFileRowContent> filterList(List<LogFileRowContent> logFileList) {
 		return logFileList;
