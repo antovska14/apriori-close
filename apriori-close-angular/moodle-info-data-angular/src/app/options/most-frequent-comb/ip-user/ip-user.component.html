@@ -1,0 +1,23 @@
+<div class="container mt-3">
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>IP Address</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dijana</td>
+            <td>Antovska</td>
+            <td>231.32131.3213.3</td>
+          </tr>
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.IPAddress }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
