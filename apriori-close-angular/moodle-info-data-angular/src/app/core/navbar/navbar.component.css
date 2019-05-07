@@ -1,0 +1,8 @@
+.title{
+    font-size: 24px;
+    color: rgb(63, 63, 63);
+    text-decoration: none;
+}
+.navbar-right{
+    justify-content: end;
+}
