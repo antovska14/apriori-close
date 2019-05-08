@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.students.moodle-info-data</groupId>
+		<artifactId>moodle-info-data-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>moodle-info-data-deploy</artifactId>
+	<packaging>war</packaging>
+	<name>moodle-info-data-deploy</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.students.moodle-info-data</groupId>
+			<artifactId>moodle-info-data-web</artifactId>
+			<type>war</type>
+			<scope>runtime</scope>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.students.moodle-info-data</groupId>
+			<artifactId>moodle-data-info-init</artifactId>
+			<scope>runtime</scope>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<overlays>
+						<overlay>
+							<id>moodle-info-data-web</id>
+							<type>war</type>
+						</overlay>
+					</overlays>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<finalName>moodle-info-data-web</finalName>
+	</build>
+</project>
