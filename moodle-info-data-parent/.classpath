@@ -10,5 +10,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="/moodle-info-data-persistence/src/main/resources/META-INF"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -2,3 +2,4 @@ com\students\moodle\info\data\persistence\implementation\model\JpaRole.class
 com\students\moodle\info\data\persistence\implementation\model\JpaUser.class
 com\students\moodle\info\data\persistence\interfaces\model\Role.class
 com\students\moodle\info\data\persistence\interfaces\model\User.class
+com\students\moodle\info\data\persistence\interfaces\repository\JpaUtility.class
