@@ -1,17 +1,17 @@
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\read\LogFileList.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\result\alg\ResultAlg.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\Itemsets.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\factory\FactoryResult.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\MemoryLogger.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AbstractItemset.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\algorithm\Algorithm.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AbstractOrderedItemset.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\read\LogFileRowContent.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\TransactionTableMapped.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\ArraysAlgos.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\MapToIdIPTable.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\result\alg\TransactionTable.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AlgoAprioriClose.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\Result.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\algorithm\Items.java
-C:\Users\Gabrijela\eclipse-workspace\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\Itemset.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\algorithm\Items.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\factory\FactoryResult.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AbstractOrderedItemset.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\read\LogFileRowContent.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AlgoAprioriClose.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\algorithm\Algorithm.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\MemoryLogger.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\Result.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\Itemset.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\result\alg\TransactionTable.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\interfaces\result\alg\ResultAlg.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\TransactionTableMapped.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\Itemsets.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\AbstractItemset.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\algorithm\ArraysAlgos.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\result\alg\MapToIdIPTable.java
+C:\Users\Dijana\Desktop\Project PTS Git\apriori-close\moodle-info-data-parent\moodle-info-data-result\src\main\java\com\students\moodle\info\data\result\implementation\read\LogFileList.java
