@@ -2,21 +2,22 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
-import { IIPUserResult } from "./most-frequent-comb/ip-user/ip-user-result";
+import { IIpUserResult } from "./most-frequent-comb/ip-user/ip-user-result";
 
 @Injectable({
   providedIn: "root"
 })
 export class OptionsService {
-  private mostFrequentUsersIpAddressCombinationUrl = "api/ip-user";
+  private url: string = "api/";
 
   constructor(private http: HttpClient) {}
 
   public getMostFrequentUsersIpAddressCombinations(): Observable<
-    IIPUserResult[]
+    IIpUserResult[]
   > {
+    let optionUrl: string = "ip-user";
     return this.http
-      .get<IIPUserResult[]>(this.mostFrequentUsersIpAddressCombinationUrl)
+      .get<IIpUserResult[]>(this.url + optionUrl)
       .pipe(catchError(this.handleError));
   }
 

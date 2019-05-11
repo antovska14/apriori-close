@@ -1,5 +1,5 @@
-export interface IIPUserResult {
-  firstName: string;
-  lastName: string;
+import {IUser} from '../../user'
+export interface IIpUserResult {
+  user: IUser;
   ipAddress: string;
 }

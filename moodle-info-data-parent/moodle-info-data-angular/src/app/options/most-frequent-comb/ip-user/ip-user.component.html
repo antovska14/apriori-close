@@ -8,15 +8,10 @@
       </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Dijana</td>
-            <td>Antovska</td>
-            <td>231.32131.3213.3</td>
-          </tr>
-      <tr *ngFor="let user of users">
-        <td>{{ user.firstName }}</td>
-        <td>{{ user.lastName }}</td>
-        <td>{{ user.ipAddress }}</td>
+      <tr *ngFor="let resultRow of result">
+        <td>{{ resultRow.user.firstName }}</td>
+        <td>{{ resultRow.user.lastName }}</td>
+        <td>{{ resultRow.ipAddress }}</td>
       </tr>
     </tbody>
   </table>
