@@ -27,6 +27,15 @@ public final class MapToIdIPTable extends TransactionTableMapped {
 		return ipArray;
 	}
 
+	@Override
+	public List<String> decodeParams(final List<String> params) {
+		final List<String> ipAddresses = new ArrayList<>();
+		for (final String parameter : params) {
+			ipAddresses.add(getKey(Integer.parseInt(parameter)));
+		}
+		return ipAddresses;
+	}
+
 	private static int getMappedIPAddress(final LogFileRowContent logFileRow) {
 		int IPAddress = 0;
 		final String ipAddressString = logFileRow.getIPAddress();
@@ -38,17 +47,12 @@ public final class MapToIdIPTable extends TransactionTableMapped {
 		return IPAddress;
 	}
 
-	private static String getKey(final Map<String, Integer> map, final int value) {
-		for (final Map.Entry<String, Integer> entry : map.entrySet()) {
+	private static String getKey(final int value) {
+		for (final Map.Entry<String, Integer> entry : ipMap.entrySet()) {
 			if (value == entry.getValue() || value == -(int) (entry.getValue())) {
 				return entry.getKey();
 			}
 		}
-		return null;
-	}
-
-	@Override
-	public List<String> decodeParams() {
 		return null;
 	}
 

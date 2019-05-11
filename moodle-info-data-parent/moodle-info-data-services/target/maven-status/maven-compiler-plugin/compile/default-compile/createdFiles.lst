@@ -1,4 +1,6 @@
 com\students\moodle\info\data\services\implementation\ServiceIdIpCombination.class
+com\students\moodle\info\data\services\dto\UserDTO.class
 com\students\moodle\info\data\services\factory\FactoryService.class
 com\students\moodle\info\data\services\interfaces\ServiceIdIp.class
+com\students\moodle\info\data\services\dto\DTOConverter.class
 com\students\moodle\info\data\services\dto\IdIpDTO.class

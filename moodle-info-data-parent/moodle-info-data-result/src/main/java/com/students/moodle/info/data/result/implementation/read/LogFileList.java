@@ -20,7 +20,7 @@ public final class LogFileList {
 	}
 
 	private static List<LogFileRowContent> readLogFile() throws IOException {
-		final String logFileName = "C:\\Users\\Dijana\\Desktop\\Project PTS Git\\apriori-close\\moodle-info-data-parent\\resources\\logs_BCS37_20181103.csv";
+		final String logFileName = "D:\\apriori-close\\apriori-close\\moodle-info-data-parent\\moodle-info-data-result\\resources\\logs_BCS37_20181103.csv";
 		List<LogFileRowContent> logFileList;
 		final BufferedReader br = new BufferedReader(new FileReader(logFileName));
 		try {

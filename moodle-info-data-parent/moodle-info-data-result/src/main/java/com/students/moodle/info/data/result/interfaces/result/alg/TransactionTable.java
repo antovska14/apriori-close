@@ -7,6 +7,6 @@ public interface TransactionTable {
 
 	public List<List<Integer>> getTransactionTable() throws IOException;
 
-	public List<String> decodeParams();
+	public List<String> decodeParams(List<String> params);
 
 }

@@ -2,8 +2,10 @@ package com.students.moodle.info.data.result.interfaces.algorithm;
 
 import java.io.IOException;
 
+import com.students.moodle.info.data.result.implementation.algorithm.Itemsets;
+
 public interface Algorithm {
 
-	Items runAlgorithm(double d, String resultFile, String algorithmResultFile) throws IOException;
+	Itemsets runAlgorithm(double d, String resultFile, String algorithmResultFile) throws IOException;
 
 }

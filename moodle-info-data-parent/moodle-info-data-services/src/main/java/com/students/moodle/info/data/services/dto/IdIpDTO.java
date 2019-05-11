@@ -5,22 +5,16 @@ import java.io.Serializable;
 public final class IdIpDTO implements Serializable {
 
 	private static final long serialVersionUID = 4787859947424887821L;
-	private final String firstName;
-	private final String lastName;
+	private final UserDTO user;
 	private final String ipAddress;
 
-	public IdIpDTO(final String firstName, final String lastName, final String ipAddress) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public IdIpDTO(final UserDTO user, final String ipAddress) {
+		this.user = user;
 		this.ipAddress = ipAddress;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
+	public UserDTO getUser() {
+		return user;
 	}
 
 	public String getIpAddress() {

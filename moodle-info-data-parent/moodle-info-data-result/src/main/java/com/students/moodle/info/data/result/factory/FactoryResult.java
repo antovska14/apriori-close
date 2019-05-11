@@ -9,7 +9,7 @@ import com.students.moodle.info.data.result.interfaces.result.alg.TransactionTab
 
 public final class FactoryResult {
 
-	private static Map<String, TransactionTable> factoryMap = new HashMap<>();
+	private static Map<String, TransactionTable> transactionTableMap = new HashMap<>();
 	private static ResultAlg result = null;
 	private static Algorithm alg = null;
 
@@ -18,11 +18,11 @@ public final class FactoryResult {
 	}
 
 	public static void addTransactionTable(final String description, final TransactionTable transactionTable) {
-		factoryMap.put(description, transactionTable);
+		transactionTableMap.put(description, transactionTable);
 	}
 
-	public static TransactionTable getImplementationTransactionTable(final String description) {
-		return factoryMap.get(description);
+	public static TransactionTable getTransactionTable(final String description) {
+		return transactionTableMap.get(description);
 	}
 
 	public static void setResultAlg(final ResultAlg resultAlg) {

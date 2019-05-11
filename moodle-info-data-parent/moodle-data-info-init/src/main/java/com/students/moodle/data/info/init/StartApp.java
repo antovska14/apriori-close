@@ -7,9 +7,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-import com.students.moodle.info.data.persistence.implementation.model.JpaRole;
-import com.students.moodle.info.data.persistence.implementation.model.JpaUser;
-import com.students.moodle.info.data.persistence.interfaces.repository.JpaUtility;
+import com.students.moodle.info.data.persistence.factory.FactoryPersistence;
+import com.students.moodle.info.data.persistence.implementation.repository.UserRepositoryImplementation;
+import com.students.moodle.info.data.persistence.implementation.utility.JpaUtility;
 import com.students.moodle.info.data.result.factory.FactoryResult;
 import com.students.moodle.info.data.result.implementation.algorithm.AlgoAprioriClose;
 import com.students.moodle.info.data.result.implementation.result.alg.MapToIdIPTable;
@@ -22,29 +22,22 @@ public final class StartApp implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(final ServletContextEvent event) {
+		System.out.println("?????????????????????????????????????????????????????????????");
 		initializeFactoryResult();
-		initializeFactoryService();
+		initializeFactoryPersistence();
 		try {
-			FactoryService.getServiceIdIp().getMostFrequentUserIpAddressCombination();
+			initializeFactoryService();
+			System.out.println("?????????????????????????????????????????????????????????????");
 		} catch (final IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		final EntityManager entityManager = JpaUtility.getEntityManager();
-		entityManager.getTransaction().begin();
-		final JpaRole role = new JpaRole(2, "role");
-		entityManager.persist(role);
-		final JpaUser user = new JpaUser(1, "Mahesh", "Varanasi", role);
-		entityManager.persist(user);
-		entityManager.getTransaction().commit();
-		System.out.println("aaaaaaaaaaaaaaaaaaaa");
-		entityManager.close();
-		JpaUtility.close();
-		System.out.println("Entity saved.");
+
 	}
 
 	@Override
 	public void contextDestroyed(final ServletContextEvent event) {
+		JpaUtility.close();
 	}
 
 	private void initializeFactoryResult() {
@@ -53,7 +46,14 @@ public final class StartApp implements ServletContextListener {
 		FactoryResult.addTransactionTable("id-ip-table", new MapToIdIPTable());
 	}
 
-	private void initializeFactoryService() {
+	private void initializeFactoryService() throws IOException {
 		FactoryService.setServiceIdIp(new ServiceIdIpCombination());
+		FactoryService.getServiceIdIp().getMostFrequentUserIpAddressCombination();
+	}
+
+	private void initializeFactoryPersistence() {
+		JpaUtility.initializeEntityFactory();
+		final EntityManager entityManager = JpaUtility.getEntityManager();
+		FactoryPersistence.setUserRepository(new UserRepositoryImplementation(entityManager));
 	}
 }

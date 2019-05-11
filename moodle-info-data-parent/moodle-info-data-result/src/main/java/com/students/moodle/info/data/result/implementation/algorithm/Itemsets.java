@@ -19,8 +19,6 @@ package com.students.moodle.info.data.result.implementation.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.students.moodle.info.data.result.interfaces.algorithm.Items;
-
 /**
  * This class represents a set of itemsets, where an itemset is an array of
  * integers with an associated support count. Itemsets are ordered by size. For
@@ -28,7 +26,7 @@ import com.students.moodle.info.data.result.interfaces.algorithm.Items;
  * 
  * @author Philippe Fournier-Viger
  */
-public class Itemsets implements Items{
+public class Itemsets {
 	/**
 	 * We store the itemsets in a list named "levels". Position i in "levels"
 	 * contains the list of itemsets of size i
@@ -44,7 +42,7 @@ public class Itemsets implements Items{
 	 * 
 	 * @param name the name of these itemsets
 	 */
-	public Itemsets(String name) {
+	public Itemsets(final String name) {
 		this.name = name;
 		levels.add(new ArrayList<Itemset>()); // We create an empty level 0 by
 												// default.
@@ -56,16 +54,16 @@ public class Itemsets implements Items{
 	 * @see ca.pfv.spmf.patterns.itemset_array_integers_with_count.AbstractItemsets#
 	 * printItemsets(int)
 	 */
-	public void printItemsets(int nbObject) {
+	public void printItemsets(final int nbObject) {
 		System.out.println(" ------- " + name + " -------");
 		int patternCount = 0;
 		int levelCount = 0;
 		// for each level (a level is a set of itemsets having the same number of items)
-		for (List<Itemset> level : levels) {
+		for (final List<Itemset> level : levels) {
 			// print how many items are contained in this level
 			System.out.println("  L" + levelCount + " ");
 			// for each itemset
-			for (Itemset itemset : level) {
+			for (final Itemset itemset : level) {
 //				Arrays.sort(itemset.getItems());
 				// print the itemset
 				System.out.print("  pattern " + patternCount + ":  ");
@@ -88,7 +86,7 @@ public class Itemsets implements Items{
 	 * addItemset(ca.pfv.spmf.patterns.itemset_array_integers_with_count.Itemset,
 	 * int)
 	 */
-	public void addItemset(Itemset itemset, int k) {
+	public void addItemset(final Itemset itemset, final int k) {
 		while (levels.size() <= k) {
 			levels.add(new ArrayList<Itemset>());
 		}
@@ -122,7 +120,7 @@ public class Itemsets implements Items{
 	 * @see ca.pfv.spmf.patterns.itemset_array_integers_with_count.AbstractItemsets#
 	 * setName(java.lang.String)
 	 */
-	public void setName(String newName) {
+	public void setName(final String newName) {
 		name = newName;
 	}
 

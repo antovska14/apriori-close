@@ -6,7 +6,6 @@ public final class LogFileRowContent {
 	private final String component;
 	private final String eventName;
 	private final String description;
-	private final String origin;
 	private final String IPAddress;
 
 	public LogFileRowContent(final String[] values) {
@@ -15,12 +14,27 @@ public final class LogFileRowContent {
 		this.component = values[2];
 		this.eventName = values[3];
 		this.description = values[4];
-		this.origin = values[5];
 		this.IPAddress = values[6];
 	}
 
+	public String getDateTime() {
+		return dateTime;
+	}
+
+	public String getEventContext() {
+		return eventContext;
+	}
+
+	public String getComponent() {
+		return component;
+	}
+
+	public String getEventName() {
+		return eventName;
+	}
+
 	public String getDescription() {
-		return this.description;
+		return description;
 	}
 
 	public String getIPAddress() {

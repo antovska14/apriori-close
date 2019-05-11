@@ -5,7 +5,6 @@ com\students\moodle\info\data\result\implementation\read\LogFileList.class
 com\students\moodle\info\data\result\implementation\algorithm\AbstractItemset.class
 com\students\moodle\info\data\result\implementation\algorithm\Itemsets.class
 com\students\moodle\info\data\result\implementation\algorithm\MemoryLogger.class
-com\students\moodle\info\data\result\interfaces\algorithm\Items.class
 com\students\moodle\info\data\result\implementation\algorithm\AlgoAprioriClose$1.class
 com\students\moodle\info\data\result\implementation\result\alg\TransactionTableMapped.class
 com\students\moodle\info\data\result\interfaces\algorithm\Algorithm.class
