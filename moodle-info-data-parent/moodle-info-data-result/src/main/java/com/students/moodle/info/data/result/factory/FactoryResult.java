@@ -6,10 +6,12 @@ import java.util.Map;
 import com.students.moodle.info.data.result.interfaces.algorithm.Algorithm;
 import com.students.moodle.info.data.result.interfaces.result.alg.ResultAlg;
 import com.students.moodle.info.data.result.interfaces.result.alg.TransactionTable;
+import com.students.moodle.info.data.result.interfaces.result.search.SearchResult;
 
 public final class FactoryResult {
 
 	private static Map<String, TransactionTable> transactionTableMap = new HashMap<>();
+	private static Map<String, SearchResult> searchMap = new HashMap<>();
 	private static ResultAlg result = null;
 	private static Algorithm alg = null;
 
@@ -23,6 +25,14 @@ public final class FactoryResult {
 
 	public static TransactionTable getTransactionTable(final String description) {
 		return transactionTableMap.get(description);
+	}
+
+	public static void addSearchMap(final String description, final SearchResult searchResult) {
+		searchMap.put(description, searchResult);
+	}
+
+	public static SearchResult getSearchMap(final String description) {
+		return searchMap.get(description);
 	}
 
 	public static void setResultAlg(final ResultAlg resultAlg) {

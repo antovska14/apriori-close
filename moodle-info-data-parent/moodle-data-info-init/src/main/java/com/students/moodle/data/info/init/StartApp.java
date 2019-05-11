@@ -1,7 +1,5 @@
 package com.students.moodle.data.info.init;
 
-import java.io.IOException;
-
 import javax.persistence.EntityManager;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -22,17 +20,9 @@ public final class StartApp implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(final ServletContextEvent event) {
-		System.out.println("?????????????????????????????????????????????????????????????");
 		initializeFactoryResult();
 		initializeFactoryPersistence();
-		try {
-			initializeFactoryService();
-			System.out.println("?????????????????????????????????????????????????????????????");
-		} catch (final IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		initializeFactoryService();
 	}
 
 	@Override
@@ -46,9 +36,8 @@ public final class StartApp implements ServletContextListener {
 		FactoryResult.addTransactionTable("id-ip-table", new MapToIdIPTable());
 	}
 
-	private void initializeFactoryService() throws IOException {
+	private void initializeFactoryService() {
 		FactoryService.setServiceIdIp(new ServiceIdIpCombination());
-		FactoryService.getServiceIdIp().getMostFrequentUserIpAddressCombination();
 	}
 
 	private void initializeFactoryPersistence() {
