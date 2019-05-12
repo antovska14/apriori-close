@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { IIpUserResult } from "./most-frequent-comb/ip-user/ip-user-result";
+import { IUser } from './user';
 
 @Injectable({
   providedIn: "root"
@@ -19,6 +20,12 @@ export class OptionsService {
     return this.http
       .get<IIpUserResult[]>(this.url + optionUrl)
       .pipe(catchError(this.handleError));
+  }
+
+  public getMostCommonDiscussonUsers(): Observable<IUser[]>{
+    let optionUrl: string = "discussion-users";
+    return this.http.get<IUser[]>(this.url + optionUrl)
+    .pipe(catchError(this.handleError));
   }
 
   private handleError(err: HttpErrorResponse): Observable<any> {

@@ -21,16 +21,10 @@ CREATE TABLE user_ip_address(
     CONSTRAINT FOREIGN KEY (user_id) REFERENCES user(id) 
 );
 
-CREATE TABLE category(
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
-);
 
 CREATE TABLE course(
 	id INT NOT NULL  PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    category_id INT NOT NULL,
-    CONSTRAINT FOREIGN	KEY (category_id) REFERENCES category(id)
+    name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE course_module(
