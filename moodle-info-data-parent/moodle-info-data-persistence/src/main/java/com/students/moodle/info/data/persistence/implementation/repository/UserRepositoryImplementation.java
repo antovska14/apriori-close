@@ -18,4 +18,5 @@ public final class UserRepositoryImplementation implements UserRepository {
 	public User findUserWithId(final Integer id) {
 		return entityManager.find(JpaUser.class, Integer.valueOf(id));
 	}
+
 }

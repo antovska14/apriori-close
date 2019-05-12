@@ -10,10 +10,12 @@ import com.students.moodle.info.data.persistence.implementation.repository.UserR
 import com.students.moodle.info.data.persistence.implementation.utility.JpaUtility;
 import com.students.moodle.info.data.result.factory.FactoryResult;
 import com.students.moodle.info.data.result.implementation.algorithm.AlgoAprioriClose;
-import com.students.moodle.info.data.result.implementation.result.alg.MapToIdIPTable;
+import com.students.moodle.info.data.result.implementation.result.alg.IdIpTableMapper;
 import com.students.moodle.info.data.result.implementation.result.alg.Result;
+import com.students.moodle.info.data.result.implementation.result.search.ResultUserDiscussion;
 import com.students.moodle.info.data.services.factory.FactoryService;
 import com.students.moodle.info.data.services.implementation.ServiceIdIpCombination;
+import com.students.moodle.info.data.services.implementation.ServiceUserDiscussion;
 
 @WebListener
 public final class StartApp implements ServletContextListener {
@@ -33,11 +35,13 @@ public final class StartApp implements ServletContextListener {
 	private void initializeFactoryResult() {
 		FactoryResult.setAlgorithm(new AlgoAprioriClose());
 		FactoryResult.setResultAlg(new Result());
-		FactoryResult.addTransactionTable("id-ip-table", new MapToIdIPTable());
+		FactoryResult.addTransactionTable("id-ip-table", new IdIpTableMapper());
+		FactoryResult.addToSearchMap("user-discussion", new ResultUserDiscussion());
 	}
 
 	private void initializeFactoryService() {
 		FactoryService.setServiceIdIp(new ServiceIdIpCombination());
+		FactoryService.addToSearchMap("user-discussion", new ServiceUserDiscussion());
 	}
 
 	private void initializeFactoryPersistence() {

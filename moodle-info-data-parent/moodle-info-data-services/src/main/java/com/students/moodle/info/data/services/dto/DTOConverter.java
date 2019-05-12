@@ -2,7 +2,7 @@ package com.students.moodle.info.data.services.dto;
 
 import com.students.moodle.info.data.persistence.interfaces.model.User;
 
-public class DTOConverter {
+public final class DTOConverter {
 
 	private DTOConverter() {
 
@@ -12,5 +12,10 @@ public class DTOConverter {
 		final UserDTO userDTO = new UserDTO(user.getFirstName(), user.getLastName());
 		final IdIpDTO idIpDTO = new IdIpDTO(userDTO, ipAddress);
 		return idIpDTO;
+	}
+
+	public static UserDTO covertToIUserDTO(final User user) {
+		final UserDTO userDTO = new UserDTO(user.getFirstName(), user.getLastName());
+		return userDTO;
 	}
 }

@@ -27,12 +27,12 @@ public final class FactoryResult {
 		return transactionTableMap.get(description);
 	}
 
-	public static void addSearchMap(final String description, final SearchResult searchResult) {
+	public static void addToSearchMap(final String description, final SearchResult searchResult) {
 		searchMap.put(description, searchResult);
 	}
 
-	public static SearchResult getSearchMap(final String description) {
-		return searchMap.get(description);
+	public static SearchResult getSearchMapMode(final String key) {
+		return searchMap.get(key);
 	}
 
 	public static void setResultAlg(final ResultAlg resultAlg) {

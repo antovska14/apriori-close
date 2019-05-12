@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.students.moodle.info.data.result.implementation.read.LogFileRowContent;
 
-public final class MapToIdIPTable extends TransactionTableMapped {
+public final class IdIpTableMapper extends TransactionTableMapped {
 	private static Map<String, Integer> ipMap = new HashMap<String, Integer>();
 
 	public static Map<String, Integer> getIpMap() {
@@ -23,7 +23,6 @@ public final class MapToIdIPTable extends TransactionTableMapped {
 	protected List<Integer> getMappedParams(final LogFileRowContent logFileRow) {
 		final List<Integer> ipArray = new ArrayList<Integer>();
 		ipArray.add(getMappedIPAddress(logFileRow));
-
 		return ipArray;
 	}
 
