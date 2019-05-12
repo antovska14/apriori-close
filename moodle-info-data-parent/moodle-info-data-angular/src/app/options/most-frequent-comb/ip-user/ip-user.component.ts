@@ -11,7 +11,6 @@ import { Subject } from "rxjs";
 })
 export class IpUserComponent implements OnInit, OnDestroy {
   public result: IIpUserResult[];
-
   private unsubscribe: Subject<void> = new Subject<void>();
 
   constructor(private optionsService: OptionsService) {}
@@ -25,7 +24,7 @@ export class IpUserComponent implements OnInit, OnDestroy {
     this.unsubscribe.complete();
   }
 
-  private getMostFrequentUsersIpAddressCombinations() {
+  private getMostFrequentUsersIpAddressCombinations():void {
     this.optionsService
       .getMostFrequentUsersIpAddressCombinations()
       .pipe(takeUntil(this.unsubscribe))
