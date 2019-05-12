@@ -27,9 +27,6 @@ public final class ServiceIdIpCombination implements ServiceIdIp {
 		final UserRepository userRepository = FactoryPersistence.getUserRepository();
 		final List<IdIpDTO> list = new ArrayList<>();
 		for (final List<String> idIp : result) {
-			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			System.out.println(idIp.get(0));
-			System.out.println(idIp.get(1));
 			final IdIpDTO idIpDTO = DTOConverter
 					.covertToIdIpDTO(userRepository.findUserWithId(Integer.parseInt(idIp.get(0))), idIp.get(1));
 			list.add(idIpDTO);
